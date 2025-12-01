@@ -11,3 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: pwd && ls -al
+      - run: go version
+      - uses: actions/setup-go@v5
+      - run: go version
