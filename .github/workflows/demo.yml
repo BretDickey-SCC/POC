@@ -8,9 +8,14 @@ on:
 jobs:
   demo:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - uses: actions/checkout@v5
       - run: pwd && ls -al
-      - run: go version
       - uses: actions/setup-go@v5
       - run: go version
+      - run: env
+      - run: gh --version
+      - run: gh auth status
+      - run: gh repo list
