@@ -12,7 +12,7 @@ jobs:
       GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - name: Run a simple script
-      - run: echo "Hello from the cli"
+        run: echo "Hello from the cli"
       - uses: actions/checkout@v5
       - run: pwd && ls -al
       - name: Configure GO
