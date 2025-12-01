@@ -15,10 +15,8 @@ jobs:
         run: echo "Hello from the cli"
       - uses: actions/checkout@v5
       - run: pwd && ls -al
-      - name: Configure GO
       - uses: actions/setup-go@v5
       - run: go version
-      - name: Demo GH CLI Commands
       - run: env
       - run: |
           gh --version
